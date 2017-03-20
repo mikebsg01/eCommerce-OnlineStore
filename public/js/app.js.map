@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"app.js","sourcesContent":["$.fn.editable.defaults.mode = 'inline';\r\n\r\n$.fn.editable.defaults.ajaxOptions = {\r\n  type: 'PUT'\r\n};\r\n\r\n$(document).ready(function() {\r\n  \r\n});"]}

@@ -11,6 +11,24 @@ class ShoppingCart extends Model {
     'status'
   ];
 
+  public function order() {
+    return $this->hasOne('App\Order');
+  }
+
+  public function approve() {
+    $this->updateCustomIDAndStatus();
+  }
+
+  public function generateCustomID() {
+    return md5($this->id.$this->updated_at);
+  }
+
+  public function updateCustomIDAndStatus() {
+    $this->status = "approved";
+    $this->customid = $this->generateCustomID();
+    $this->save();
+  }
+
   public function inShoppingCarts() {
     return $this->hasMany('App\InShoppingCart');
   }

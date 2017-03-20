@@ -161,6 +161,7 @@ return [
          * External Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        Anouar\Paypalpayment\PaypalpaymentServiceProvider::class,
     ],
 
     /*
@@ -213,6 +214,7 @@ return [
         
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'PaypalPayment' => Anouar\Paypalpayment\Facades\PaypalPayment::class,
     ],
 
 ];

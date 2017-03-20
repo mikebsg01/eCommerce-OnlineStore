@@ -22,3 +22,13 @@ Route::resource('in_shopping_carts', 'InShoppingCartsController', [
 ]);
 
 Route::get('/cart', 'ShoppingCartsController@index');
+
+Route::get('/payments/store', 'PaymentsController@store');
+
+Route::resource('purchases', 'ShoppingCartsController', [
+  'only'  => ['show']
+]);
+
+Route::resource('orders', 'OrdersController', [
+  'only'  => ['index', 'update']
+]);
